@@ -1,20 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Diary Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Site – Inspired by Heights.com</title>
+  <style>
+    body { margin:0; font-family:sans-serif; line-height:1.5; }
+    a { text-decoration:none; color:inherit; }
+    header {
+      position:fixed; top:0; width:100%; background:#fff;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); z-index:100;
+    }
+    .logo { font-weight:bold; font-size:1.2rem; }
+    nav a { margin:0 10px; font-weight:500; }
+    .btn-primary {
+      background:#28a745; color:white;
+      padding:8px 16px; border:none; border-radius:4px;
+    }
+    .hero {
+      padding:120px 20px 80px;
+      text-align:center;
+      background-image:url('https://via.placeholder.com/1400x600');
+      background-size:cover; background-position:center;
+      color:white;
+    }
+    .hero h1 { font-size:2.5rem; margin-bottom:20px; text-shadow:0 2px 4px rgba(0,0,0,0.4); }
+    .features {
+      display:flex; flex-wrap:wrap; justify-content:center;
+      gap:20px; padding:40px 20px; background:#f9f9f9;
+    }
+    .card {
+      background:white; padding:20px; border-radius:8px;
+      box-shadow:0 2px 4px rgba(0,0,0,0.1);
+      width:300px;
+    }
+    .card img { width:100%; border-radius:4px; }
+    .card h3 { margin-top:15px; margin-bottom:10px; }
+  </style>
 </head>
 <body>
-    <h1>Welcome to Our Memory Diary</h1>
-    <ul>
-        <li><a href="couple-diary.html">Couple Memory Diary</a></li>
-        <li><a href="life-events.html">Life Events Timeline</a></li>
-        <li><a href="dream-log.html">Dream Log</a></li>
-        <li><a href="travel-map.html">Travel + Memory Map</a></li>
-        <li><a href="gallery.html">Photo Gallery</a></li>
-    </ul>
+
+  <header>
+    <div class="logo">MyBrand</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn-primary" href="#start">Get Started</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Your All-in-One Platform to Grow & Succeed</h1>
+    <p>Build courses, communities, and coaching programs—all with powerful AI assistance.</p>
+    <button class="btn-primary">Start Free</button>
+  </section>
+
+  <section id="features" class="features">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Feature 1">
+      <h3>AI Assistant</h3>
+      <p>Get help with content creation, site building, and student communication.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Feature 2">
+      <h3>Course Builder</h3>
+      <p>Create courses, memberships, and drip content with an easy editor.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Feature 3">
+      <h3>Community Tools</h3>
+      <p>Engage your users via membership groups, forums, and live chat.</p>
+    </div>
+  </section>
+
+  <!-- Add more sections like Testimonials, CTA banners, Footer as needed -->
+
 </body>
 </html>
