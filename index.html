@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Required</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    #login-box {
+      padding: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    iframe {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-box">
+    <h2>Enter Username and Password</h2>
+    <input type="text" id="username" placeholder="satnam"><br><br>
+    <input type="password" id="password" placeholder="satnam"><br><br>
+    <button onclick="login()">Login</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <iframe id="homepage" src="home.html"></iframe>
+
+  <script>
+    const USERNAME = "admin";
+    const PASSWORD = "mypassword";
+
+    function login() {
+      const user = document.getElementById("satnam").value;
+      const pass = document.getElementById("satnam").value;
+
+      if (user === USERNAME && pass === PASSWORD) {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementById("homepage").style.display = "block";
+      } else {
+        document.getElementById("error").textContent = "Incorrect credentials.";
+      }
+    }
+  </script>
+</body>
+</html>
