@@ -2,80 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Your Site – Inspired by Heights.com</title>
+  <title>Home - Your Brand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { margin:0; font-family:sans-serif; line-height:1.5; }
-    a { text-decoration:none; color:inherit; }
-    header {
-      position:fixed; top:0; width:100%; background:#fff;
-      display:flex; justify-content:space-between; align-items:center;
-      padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); z-index:100;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #dff0ff;
+      color: #00145d;
     }
-    .logo { font-weight:bold; font-size:1.2rem; }
-    nav a { margin:0 10px; font-weight:500; }
-    .btn-primary {
-      background:#28a745; color:white;
-      padding:8px 16px; border:none; border-radius:4px;
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00145d;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #00145d;
+      font-weight: 500;
+    }
+
+    .shop-button {
+      background-color: #00145d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
     .hero {
-      padding:120px 20px 80px;
-      text-align:center;
-      background-image:url('https://via.placeholder.com/1400x600');
-      background-size:cover; background-position:center;
-      color:white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 32px;
+      background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
     }
-    .hero h1 { font-size:2.5rem; margin-bottom:20px; text-shadow:0 2px 4px rgba(0,0,0,0.4); }
-    .features {
-      display:flex; flex-wrap:wrap; justify-content:center;
-      gap:20px; padding:40px 20px; background:#f9f9f9;
+
+    .hero-left {
+      max-width: 500px;
     }
-    .card {
-      background:white; padding:20px; border-radius:8px;
-      box-shadow:0 2px 4px rgba(0,0,0,0.1);
-      width:300px;
+
+    .stars {
+      color: #ffaa00;
+      font-size: 18px;
+      margin-bottom: 12px;
     }
-    .card img { width:100%; border-radius:4px; }
-    .card h3 { margin-top:15px; margin-bottom:10px; }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: bold;
+      margin: 0 0 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .hero-buttons a {
+      padding: 12px 20px;
+      border-radius: 40px;
+      margin-right: 12px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-filled {
+      background-color: #00145d;
+      color: white;
+    }
+
+    .btn-outline {
+      border: 2px solid #00145d;
+      color: #00145d;
+    }
+
+    .hero-right img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-right {
+        margin-top: 30px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">MyBrand</div>
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a href="#pricing">Pricing</a>
-      <a class="btn-primary" href="#start">Get Started</a>
-    </nav>
-  </header>
+  <div class="navbar">
+    <div class="logo">HEIGHTS</div>
+    <div class="nav-links">
+      <a href="#">Shop</a>
+      <a href="#">Ingredients</a>
+      <a href="#">Science</a>
+      <a href="#">Reviews</a>
+      <a href="#">Give 20%, Get 20%</a>
+      <a class="shop-button" href="#">SHOP</a>
+    </div>
+  </div>
 
   <section class="hero">
-    <h1>Your All-in-One Platform to Grow & Succeed</h1>
-    <p>Build courses, communities, and coaching programs—all with powerful AI assistance.</p>
-    <button class="btn-primary">Start Free</button>
-  </section>
-
-  <section id="features" class="features">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x180" alt="Feature 1">
-      <h3>AI Assistant</h3>
-      <p>Get help with content creation, site building, and student communication.</p>
+    <div class="hero-left">
+      <div class="stars">★★★★★ 4.8/5 based on 7,029 reviews</div>
+      <h1>Everything you need,<br>nothing you don’t</h1>
+      <p>Feel better with science-backed supplements for your brain, body and gut.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-filled">SHOP VITALS</a>
+        <a href="#" class="btn-outline">SHOP BIOTIC</a>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x180" alt="Feature 2">
-      <h3>Course Builder</h3>
-      <p>Create courses, memberships, and drip content with an easy editor.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x180" alt="Feature 3">
-      <h3>Community Tools</h3>
-      <p>Engage your users via membership groups, forums, and live chat.</p>
+    <div class="hero-right">
+      <img src="https://www.heights.com/cdn/shop/files/LP-Hero-V2-Image.png" alt="Heights product">
     </div>
   </section>
-
-  <!-- Add more sections like Testimonials, CTA banners, Footer as needed -->
 
 </body>
 </html>
