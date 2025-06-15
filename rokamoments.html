@@ -224,12 +224,22 @@
 <!-- ✅ Orientation Detection Script (ADD THIS) -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".media-card img").forEach(function (img) {
-      img.onload = function () {
-        const orientation = img.naturalWidth > img.naturalHeight ? 'landscape' : 'portrait';
-        img.classList.add(orientation);
-      };
+    const cards = Array.from(document.querySelectorAll(".media-card"));
+    const landscape = [];
+    const portrait = [];
+
+    cards.forEach(card => {
+      const img = card.querySelector("img");
+      if (img.naturalWidth > img.naturalHeight) {
+        landscape.push(card);
+      } else {
+        portrait.push(card);
+      }
     });
+
+    const gallery = document.querySelector(".gallery");
+    gallery.innerHTML = '';
+    [...landscape, ...portrait].forEach(card => gallery.appendChild(card));
   });
 </script>
 
