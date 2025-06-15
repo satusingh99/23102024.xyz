@@ -1859,7 +1859,7 @@ body {
   color: #333;
 }
 
-/* Responsive grid layout */
+/* Base styling */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1874,7 +1874,10 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  aspect-ratio: 4 / 5; /* Keeps portrait orientation spacing consistent */
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .media-card:hover {
@@ -1883,16 +1886,28 @@ body {
 
 /* Image styling */
 .media-card img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
-  display: block;
   border-radius: 10px;
+  display: block;
 }
 
-/* Responsive tweaks for small devices */
+/* Landscape-specific */
+.media-card img.landscape {
+  width: 100%;
+  height: auto;
+}
+
+/* Portrait-specific */
+.media-card img.portrait {
+  height: 100%;
+  width: auto;
+}
+
+/* Mobile adjustments */
 @media (max-width: 600px) {
   .media-card {
-    aspect-ratio: 3 / 4; /* Slightly taller cards on mobile */
+    height: 220px;
   }
 }
