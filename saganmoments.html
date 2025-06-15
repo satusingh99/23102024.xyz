@@ -204,5 +204,18 @@
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
+
+<!-- ✅ Orientation Detection Script (ADD THIS) -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".media-card img").forEach(function (img) {
+      img.onload = function () {
+        const orientation = img.naturalWidth > img.naturalHeight ? 'landscape' : 'portrait';
+        img.classList.add(orientation);
+      };
+    });
+  });
+</script>
+
 </body>
 </html>
