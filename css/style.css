@@ -1858,14 +1858,6 @@ body {
   font-weight: bold;
   color: #333;
 }
-/* Title styling */
-.title {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-}
 
 /* Base styling */
 .gallery {
